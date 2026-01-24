@@ -4,7 +4,8 @@ import AllInvoices from "../../components/AdminComponents/AllInvoices"
 
 type Props = {
 
-  isDashboard:boolean
+  
+  
 }
 
 export const metadata = {
@@ -19,7 +20,7 @@ export const metadata = {
 
 
 
-const page = ({isDashboard}: Props) => {
+const page = (props: Props) => {
  
  
 
