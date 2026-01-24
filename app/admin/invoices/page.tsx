@@ -1,0 +1,45 @@
+import AdminDashboardHeader from "../../components/AdminComponents/AdminDashboardHeader";
+import AdminSidebar from "../../components/AdminComponents/AdminSidebar"
+import AllInvoices from "../../components/AdminComponents/AllInvoices"
+
+type Props = {
+
+  isDashboard:boolean
+}
+
+export const metadata = {
+
+  title:"Admin All Invoices",
+  description:"ELearning is a platform...",
+  keywords:"Programming, MERN, Redux, ML"
+
+};
+
+
+
+
+
+const page = ({isDashboard}: Props) => {
+ 
+ 
+
+    return (
+
+    <div className=' grid grid-cols-12'>
+          
+          <div className='col-span-2 bg-[#111C43]!'>
+          <AdminSidebar /> 
+          </div>    
+
+        <div className='col-span-10 px-10'> 
+            <AdminDashboardHeader />
+         <AllInvoices isDashboard={false} />
+          </div> 
+
+            </div>
+            
+
+    )
+}
+
+export default page
