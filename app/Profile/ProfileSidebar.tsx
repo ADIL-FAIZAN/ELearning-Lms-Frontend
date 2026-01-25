@@ -43,9 +43,9 @@ const ProfileSidebar = ({user,active,setActive }: Props) => {
 
   return (
     
-    <div className={`bg-gray-800 flex flex-col gap-7 rounded h-[400px] w-full min-xl:w-[250px] sm:w-full py-5 px-2`}>
+    <div className={`bg-gray-800 flex flex-col gap-7 rounded h-[400px] w-full max-sm:w-fit min-lg:w-[230px]   py-5 px-2`}>
   
-    <div className={`${active === 1? `bg-gray-600` :"bg-gray-800"} hover:bg-gray-600  cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(1)}}>
+    <div className={`${active === 1? `bg-gray-600` :"bg-gray-800"} hover:bg-gray-600 max-sm:w-[60px] cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(1)}}>
   
     <div>
     
@@ -62,7 +62,7 @@ const ProfileSidebar = ({user,active,setActive }: Props) => {
                               
     </div>
                             
-    <div className={`${active === 2? `bg-gray-600` :"bg-gray-800"} hover:bg-gray-600  cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(2)}}>
+    <div className={`${active === 2? `bg-gray-600` :"bg-gray-800"} max-sm:w-[60px] hover:bg-gray-600  cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(2)}}>
   
     <div>
     <RiLockPasswordLine size={20} className="text-white" />         
@@ -71,7 +71,7 @@ const ProfileSidebar = ({user,active,setActive }: Props) => {
                               
     </div>
   
-     <div className={`${active === 3? `bg-gray-600` :"bg-gray-800"} hover:bg-gray-600  cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(3)}}>
+     <div className={`${active === 3? `bg-gray-600` :"bg-gray-800"} max-sm:w-[60px] hover:bg-gray-600  cursor-pointer px-[10px] rounded-lg h-[40px] flex items-center gap-3`} onClick={()=>{setActive(3)}}>
   
     <div>
      <SiCoursera size={20} className="text-white" />       
@@ -99,7 +99,7 @@ const ProfileSidebar = ({user,active,setActive }: Props) => {
 
 
 
-   <div className={`${active === 4 ? `bg-gray-600` : "bg-gray-800"} hover:bg-gray-600 px-[10px] cursor-pointer rounded-lg h-[40px] flex items-center gap-3`} onClick={() => { setActive(4); handleLogout()}}>
+   <div className={`${active === 4 ? `bg-gray-600` : "bg-gray-800"} max-sm:w-[60px] hover:bg-gray-600 px-[10px] cursor-pointer rounded-lg h-[40px] flex items-center gap-3`} onClick={() => { setActive(4); handleLogout()}}>
   
     <div>
   <AiOutlineLogout size={20} className="text-white"/>      
