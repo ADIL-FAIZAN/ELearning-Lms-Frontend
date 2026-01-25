@@ -15,8 +15,8 @@ const EnrolledCourses = (props: Props) => {
    const [userCourses, setUserCourses] = useState([]);
    const AllCourses = AllCoursesData?.AllCoursesData; 
     
-    
-   useEffect(() => {
+  
+  useEffect(() => {
 
     const filteredCourses = AllCourses?.filter((eachCourse: any) => {
     
@@ -25,9 +25,9 @@ const EnrolledCourses = (props: Props) => {
       return true;
     
       } else {
-      
-      return false;
 
+      return false;
+      
       }
 
     });
@@ -52,11 +52,11 @@ const EnrolledCourses = (props: Props) => {
 
    {userCourses?.length > 0 ? (<>
      
-   <div className='flex gap-5 mt-15'>
+   <div className='grid max-md:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-sm:w-fit w-full gap-5 h-full'> 
         
    {userCourses?.map((course: any) => (
      
-   <CourseCard {...course} />               
+   <CourseCard EnrolledCourses={true} {...course} />               
                          
    ))}           
                             
