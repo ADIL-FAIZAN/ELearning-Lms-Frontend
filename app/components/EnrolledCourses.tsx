@@ -52,7 +52,7 @@ const EnrolledCourses = (props: Props) => {
 
    {userCourses?.length > 0 ? (<>
      
-   <div className='grid max-md:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-sm:w-fit w-full gap-5 h-full'> 
+   <div className='grid max-md:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 max-sm:w-fit w-full gap-5 h-full'> 
         
    {userCourses?.map((course: any) => (
      
