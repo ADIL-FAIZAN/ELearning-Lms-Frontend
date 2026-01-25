@@ -19,16 +19,17 @@ const AllCourses = AllCoursesData?.AllCoursesData;
           <div className='flex justify-center font-bold w-full font-Poppins text-[25px] leading-[35px] sm:text-3xl lg:text-4xl text-white !leading-[60px]tracking-tight'>
           <div>
         
-           <div className='flex max-md:flex-col max-md:items-center max-md:justify-center'>     
+           <div className='flex max-md:flex-col min-lg:gap-2 max-md:items-center max-md:justify-center'>     
               <p className='max-md:inline-block'>Expand Your Career</p>
               <span className="text-gradient min-md:inline-block">Opportunity </span>
        </div>
               
 
-              <div className='flex justify-center mt-5'>     
-             
-              <div className='max-sm:w-[240px]'>Opportunity With Our Courses  </div>
-          
+              <div className='flex justify-center max-sm:ml-7  min-sm:gap-2 mt-5'>     
+             <div className='min-sm:flex min-sm:gap-2'>
+             <div className='w-fit max-sm:hidden'>Opportunity </div>
+              <div className='max-sm:w-[240px]'>With Our Courses  </div>
+              </div>
           
           </div>
           </div>
