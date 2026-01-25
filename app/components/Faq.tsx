@@ -69,9 +69,9 @@ const Faq = ({isPage}: Props) => {
           <p className='font-bold font-Poppins leading-[35px] text-xl sm:text-3xl xl:text-3xl mt-10 text-white tracking-tight'>Frequently Asked Questions</p>
           </div>                   
                               
-          <div className="w-full mt-[20px]  min-xl:flex min-xl:justify-center">
+          <div className="w-full mt-5 min-lg:mt-[20px]  min-xl:flex min-xl:justify-center">
                     
-                      <div className="mt-12 w-full min-xl:w-[1000px]">
+                      <div className="min-lg:mt-12 w-full min-xl:w-[1000px]">
                       <dl className="w-full">
                         {questions?.map((q: any) => (
                           <div
