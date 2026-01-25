@@ -30,11 +30,11 @@ const HomeText = (props: Props) => {
 
        <div className='flex flex-col items-center justify-center '>     
        <p className='max-md:inline-block'>Our Students Are</p>
-       <div className="text-gradient min-md:inline-block ">Our Strength</div>
+       <div className="text-gradient min-lg:mt-1 min-md:inline-block">Our Strength</div>
        </div>
               
           <div className='mt-5 w-full flex justify-center'>
-          <div className='max-md:w-[180px] max-lg:text-2xl text-3xl max-lg:px-5'>See What They Say About Us</div>
+          <div className='max-md:w-[210px]  max-lg:text-xl text-3xl max-lg:px-8'>See What They Say About Us</div>
           </div>
             
           </div>
