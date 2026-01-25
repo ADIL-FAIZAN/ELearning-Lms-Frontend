@@ -70,7 +70,7 @@ useEffect(() => {
   return (
     <>
      <Header open={open} setOpen={setOpen} activeItem={activeItem} route={route} setRoute={setRoute} />  
-      <div className='max-md:px-4 px-15 mt-6 min-h-screen '>
+      <div className='max-xl:px-4 px-15 mt-6 min-h-screen '>
 
        {AllCoursesDataLoading ? (
     
@@ -106,8 +106,9 @@ useEffect(() => {
                 ))}
                   </div>  
       </div>        
-                                
-      <div className='grid grid-cols-1 w-full gap-10 lg:grid-cols-4 mt-10 h-full'>  
+                              
+              <div className='max-sm:flex max-sm:justify-center max-sm:w-full mt-10'>
+      <div className='grid max-md:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-sm:w-fit w-full gap-5 h-full'>  
                                 
       {Courses?.map((eachCourse: any) => (
           
@@ -115,7 +116,8 @@ useEffect(() => {
                       
       ))}            
       
-      </div>   
+      </div>  
+      </div>          
       </>
                           
       )}
