@@ -62,7 +62,7 @@ setSubTitle(data?.layout?.banner?.subTitle);
             
           </div>
           {/* Hero content section */}
-          <div className="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 max-lg:mt-14">
+          <div className="lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left z-10 max-lg:mt-2 min-lg:mt-14">
             {/* Main headline */}
             <h1 className="text-3xl lg:text-5xl font-bold  text-white mb-4 leading-tight">
             {title}
