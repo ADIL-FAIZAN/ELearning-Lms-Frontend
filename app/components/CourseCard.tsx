@@ -6,6 +6,7 @@ import Link from 'next/link'
 
 type Props = {
   
+  EnrolledCourses?:boolean,
   _id:string,
   name: string,
   description: string,
@@ -29,13 +30,13 @@ type Props = {
   createdAt:Date
 }
 
-const CourseCard = ({_id,name,description,price,estimatedPrice,thumbnail,tags,level,demoUrl,benefits,prerequistes,courseData,ratings,purchased,reviews,createdAt}: Props) => {
+const CourseCard = ({EnrolledCourses, _id, name, description, price, estimatedPrice, thumbnail, tags, level, demoUrl, benefits, prerequistes, courseData, ratings, purchased, reviews, createdAt }: Props) => {
 
 
 
   return (
   
-      <div className='w-[340px] h-[300px] bg-gray-800 shadow-[bg-slate-700] bg-opacity-20 backdrop-blur border border-[#ffffff1d] px-3 py-3 rounded'>
+    <div className={` ${EnrolledCourses?`w-[270px] h-[300px]`:"w -[340px] h-[300px]"} bg-gray-800 shadow-[bg-slate-700] bg-opacity-20 backdrop-blur border border-[#ffffff1d] px-3 py-3 rounded`}>
           
           {/* Image Div */}
           <Link href={`/course/${_id}`}><div className=' w-full h-[140px] rounded-sm'>
