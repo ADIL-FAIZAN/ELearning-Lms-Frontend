@@ -15,7 +15,7 @@ const MainTeamComponent = (props: Props) => {
     return (
     <div className=' grid grid-cols-12'>
           
-          <div className='col-span-2 bg-[#111C43]!'>
+          <div className='col-span-2'>
           <AdminSidebar /> 
           </div>    
 
