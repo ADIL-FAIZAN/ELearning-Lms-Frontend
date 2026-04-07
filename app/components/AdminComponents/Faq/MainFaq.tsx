@@ -19,7 +19,7 @@ const MainFaq = (props: Props) => {
    </div>
    
    <div className="col-span-10 xl:px-10">
-    
+   <div className="flex justify-center font-bold text-xl md:hidden"> FAQ's</div> 
   <EditFaq/>
    
   </div>
