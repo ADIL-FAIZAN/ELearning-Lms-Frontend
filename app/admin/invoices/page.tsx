@@ -38,7 +38,7 @@ const page = (props: Props) => {
         <AdminSidebar /> 
         </div>    
 
-        <div className='col-span-10 px-10'>     
+        <div className='col-span-10 xl:px-10'>     
         <AllInvoices isDashboard={false} />
         </div> 
 
