@@ -128,14 +128,13 @@ const AdminDashboardHeader = (props: Props) => {
   };
 
 
-
-
-
   return (
-  <>
-      <div className='h-[70px] w-full flex justify-end items-center mb-5'>
+
+    <div className='w-full'>
+      
+    <div className='h-[70px] w-full flex justify-end items-center mb-5'>
           
-      <div className='flex gap-5'>
+    <div className='flex gap-5'>
         
         <ThemeSwitcher  />
           
@@ -199,7 +198,7 @@ const AdminDashboardHeader = (props: Props) => {
 
       :""} 
 
-     </> 
+     </div> 
   )
 }
 
