@@ -34,30 +34,32 @@ const CourseCard = ({EnrolledCourses, _id, name, description, price, estimatedPr
 
 
 
+  
+
   return (
   
-    <div className={` ${EnrolledCourses?`w-[270px] h-[300px]`:"w -[340px] h-[300px]"} bg-gray-800 shadow-[bg-slate-700] bg-opacity-20 backdrop-blur border border-[#ffffff1d] px-3 py-3 rounded`}>
+    <div className={` ${EnrolledCourses?`w-[270px] h-[340px]`:`w-[340px] h-[340px]`} bg-gray-800 shadow-[bg-slate-700] bg-opacity-20 backdrop-blur border border-[#ffffff1d] px-3 py-3 rounded`}>
           
           {/* Image Div */}
-          <Link href={`/course/${_id}`}><div className=' w-full h-[140px] rounded-sm'>
+      <Link href={`/course/${_id}`}>
+      <div className=' w-full h-[190px] rounded-sm'>
           
-        <Image src={ thumbnail?.url  ||"/assests/client-1.jpg"} height={140} width={300}  className="w-[300px] h-[140px] object-cover rounded-sm "  alt="User Avatar" />
+      <Image src={ thumbnail?.url  ||"/assests/client-1.jpg"} height={190} width={340}  className="w-[340px] h-[190px] object-cover rounded-sm "  alt="User Avatar" />
               
-          </div>   
-        </Link>  
+      </div>   
+      </Link>  
           {/* Course Name */}
           
-          <div className='mt-3 w-full wrap-break-word text-[#fff] font-poppins'>              
-          {name}
+          <div className='mt-3 w-full wrap-break-word font-semibold text-[#fff] font-poppins'>              
+          {name.slice(0,50)}
           </div>
           
           {/* Ratings and number of students  */}
 
-          <div className='flex justify-between mt-1 '>              
+          <div className='flex justify-between mt-2'>              
           <div className='text-[16px]'>     
           <Ratings rating={ratings}/>
           </div>
-
               
           <div className='font-poppins'>
                   
@@ -66,7 +68,7 @@ const CourseCard = ({EnrolledCourses, _id, name, description, price, estimatedPr
           </div>
           </div>
 
-         <div className='flex justify-between'>
+         <div className='flex justify-between mt-4'>
         
           <div className='flex mt-3 h-[50px]'>  
           <div className='text-[16px]'>${price}</div>   
