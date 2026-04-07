@@ -10,6 +10,14 @@ const MainEditCategories = (props: Props) => {
 
 
   return (
+
+  <>
+  
+ <div className="w-full max-md:pr-3 md:px-10">
+ <AdminDashboardHeader />  
+ </div>    
+
+ 
   <div className="grid grid-cols-12">
          
    <div className="col-span-2 max-md:col-span-1">
@@ -17,14 +25,16 @@ const MainEditCategories = (props: Props) => {
    </div>
    
    <div className="col-span-10 max-md:col-span-11 min-md:px-10">
-  <AdminDashboardHeader  />
+ 
   <EditCategories/>
    
     </div>
    
    
     </div>
-  )
+ 
+     </>
+      )
 }
 
 export default MainEditCategories
