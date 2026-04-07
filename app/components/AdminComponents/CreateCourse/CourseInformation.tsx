@@ -84,6 +84,8 @@ const CourseInformation = ({setCourseInfo,courseInfo,setActiveItem}: Props) => {
           
       <div className='min-h-screen pb-20'>
           
+      <div className="flex justify-center font-bold text-xl md:hidden mb-15"> Create Course</div>     
+
       <form onSubmit={handleSubmit}>
         {/* Course name input */}
         <div>
