@@ -150,9 +150,9 @@ type Props = {};
   return (
     
     <>
-   <div className="px-10">
-    <AdminDashboardHeader/>
-    </div> 
+       <div className="w-full max-md:pr-3 md:px-10">
+      <AdminDashboardHeader />  
+      </div>
       
     <div className="flex w-full">
       
@@ -224,13 +224,11 @@ type Props = {};
           ""
         )}
 
-
-
       </div>
 
-      <div className="min-lg:w-[15%]  min-lg:h-[500px] max-md:hidden mt-10 flex ">
-        <CreateCourseOption activeItem={activeItem} />
-      </div>
+    <div className="min-lg:w-[15%]  min-lg:h-[500px] max-md:hidden mt-10 flex ">
+    <CreateCourseOption activeItem={activeItem} />
+    </div>
     </div>
     </div>
 
