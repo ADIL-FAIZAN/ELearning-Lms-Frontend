@@ -136,7 +136,7 @@ const AdminDashboardHeader = (props: Props) => {
           
     <div className='flex gap-5'>
         
-        <ThemeSwitcher  />
+      
           
         <div className='relative' onClick={() =>{setNotificationClickPopUp(!notificationClickPopUp)}}>
               
