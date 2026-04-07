@@ -79,7 +79,7 @@ const NavItem = ({user,activeItem,isMobile,setOpenSidebar,setAuthenticationPopUp
 
         ))}
             
-       <ThemeSwitcher/>    
+        
        
         {!user ? (
 
