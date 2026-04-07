@@ -12,6 +12,13 @@ const MainAdminAllUsers = (props: Props) => {
 
   return (
     
+
+    <>
+      
+      <div className="w-full max-md:pr-3 md:px-10">
+      <AdminDashboardHeader />  
+      </div>
+
     <div className="grid grid-cols-12">
          
    <div className="col-span-2">
@@ -19,8 +26,9 @@ const MainAdminAllUsers = (props: Props) => {
    </div>
    
    <div className="col-span-10 xl:px-10">
-    
-   <AdminDashboardHeader />       
+
+   <div className="flex justify-center font-bold text-xl md:hidden"> All Users</div>     
+
    <Allusers/>
    
     </div>
@@ -28,6 +36,7 @@ const MainAdminAllUsers = (props: Props) => {
    
     </div>
   
+    </>
   )
 }
 
