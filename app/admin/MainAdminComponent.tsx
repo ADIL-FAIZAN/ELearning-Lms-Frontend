@@ -15,7 +15,7 @@ const MainAdminComponent = (props: Props) => {
           <AdminSidebar/> 
           </div>    
 
-          <div className='max-xl:col-span-11 col-span-10 px-10 h-fit'>     
+          <div className='max-xl:col-span-11 col-span-10 md:px-10 max-md:pl-10 max-md:pr-2 h-fit'>     
           <AdminDashboard/>
           </div> 
 
