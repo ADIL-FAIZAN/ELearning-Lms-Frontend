@@ -271,7 +271,7 @@ const CourseDetail = ({ courseId }: Props) => {
              <div className='absolute text-[14px] line-through ml-10 top-[-3px] text-gray-400'>{courseData?.course?.estimatedPrice}$</div>
              </div>
              
-             <div>{discountedPercentage}% Off</div>  
+             <div>{discountedPercentage.toFixed(0)}% Off</div>  
          
              </div>
 
