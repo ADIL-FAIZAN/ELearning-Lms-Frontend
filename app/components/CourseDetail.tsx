@@ -20,6 +20,10 @@ import { VscVerifiedFilled } from 'react-icons/vsc';
 import Image from 'next/image';
 import { redirect, useRouter } from 'next/navigation';
 import { useLoadUserQuery } from '@/redux/features/api/apiSlice';
+import toast from 'react-hot-toast';
+import CustomModal from '../utils/CustomModal';
+import Login from './Auth/login';
+
 
 type Props = {
  courseId: string
@@ -72,9 +76,17 @@ const CourseDetail = ({ courseId }: Props) => {
   
 
     const handleOrder = () => {
-        
-    setPopUpOpen(!popUpOpen);
+      
+      if (!user) {
+      
+      setOpen(true);
 
+      } else {
+        
+      setPopUpOpen(!popUpOpen);
+
+      }; 
+    
     };
 
 
@@ -95,7 +107,6 @@ const CourseDetail = ({ courseId }: Props) => {
     };
   
 
-  
     return (  
     
     <>
@@ -317,13 +328,24 @@ const CourseDetail = ({ courseId }: Props) => {
     </>   
     
     ) : ""}
-                                
+
+
+ {route === "Login" && open && (
+        
+          <CustomModal
+          open={open}
+          setOpen={setOpen}
+          setRoute={setRoute}
+          activeItem={activeItem}
+          component={Login}
+          
+        />
+    )}
+            
     <Footer />                                 
     </>               
         )}{/* is loading main divs */}
         
-     
-  
   </>
   )
 }
