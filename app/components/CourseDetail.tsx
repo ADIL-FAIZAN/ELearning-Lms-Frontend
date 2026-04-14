@@ -122,20 +122,20 @@ const CourseDetail = ({ courseId }: Props) => {
     {stripePromise ? (
     <>
 
-    <div className='grid grid-cols-12 mt-10 px-10 min-h-screen'>
+    <div className='flex flex-col-reverse sm:grid sm:grid-cols-12 mt-10 px-5 sm:px-10 min-h-screen'>
 
-    <div className='col-span-8 pr-15'>
+    <div className='sm:col-span-8 sm:pr-15'>
                                 
     <div> {/* Course Detail Parent Div */}
     
     <div>  
-    <div className='font-poppins font-bold text-[22px]'>
+    <div className='font-poppins font-bold text-[22px] max-sm:hidden'>
 
     {courseData?.course?.name}                           
 
     </div>
                             
-    <div className='flex justify-between w-full mt-2 mb-5'>
+    <div className='flex justify-between max-sm:hidden w-full mt-2 mb-5'>
 
     <div className='flex'>
     <Ratings rating={courseData?.course.ratings} />                               
@@ -146,7 +146,7 @@ const CourseDetail = ({ courseId }: Props) => {
 
     </div>
                             
-    <div>
+    <div className='max-sm:mt-10'>
     <p className="font-poppins font-bold text-[25px]">What you will learn from this course?</p>
     
      <div className='mt-2'>                               
@@ -264,21 +264,29 @@ const CourseDetail = ({ courseId }: Props) => {
                         
 
     </div>
+    
+                
     </div>
 
-    <div className='col-span-3'>
+    <div className='sm:col-span-3'>
                              
-        <div>
-        <div className='h-[250px] w-full'>
-    <CourseVideo videoUrl={courseData?.course?.demoUrl} />                                    
+      <div>
+    
+      <div className='font-poppins font-bold text-[22px] mb-6 sm:hidden'>
 
-    </div>
+      {courseData?.course?.name}                           
+
+      </div>
+
+     <div className='h-[250px] w-full'>
+     <CourseVideo videoUrl={courseData?.course?.demoUrl} />                                    
+     </div>
     
        <div className='flex my-5 gap-15'>
                  
              <div className='text-[16px] relative'>     
              {courseData?.course?.price}$
-                     
+        
              <div className='absolute text-[14px] line-through ml-10 top-[-3px] text-gray-400'>{courseData?.course?.estimatedPrice}$</div>
              </div>
              
@@ -303,6 +311,9 @@ const CourseDetail = ({ courseId }: Props) => {
 
     </div>   
     </div>
+
+                    
+
 
      {popUpOpen ? (
      <>
