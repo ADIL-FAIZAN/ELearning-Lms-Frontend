@@ -84,7 +84,7 @@ const CourseContent = ({courseContentData,courseId,refetch,course}: Props) => {
         
       </div>  
     
-      <div className='xl:col-span-4'>
+      <div className='xl:col-span-4 mt-25 sm:mt-0'>
        <div className='w-full px-0 lg:px-10'>
        <ValidCourseContentList courseData={contentData || [{}]} setActiveContentIdx={setActiveContentIdx} />
        </div>
