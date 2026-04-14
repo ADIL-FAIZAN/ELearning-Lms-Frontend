@@ -52,13 +52,13 @@ const CourseContent = ({courseContentData,courseId,refetch,course}: Props) => {
 
   return (
     
-    <div className='grid grid-cols-12 px-15 my-5 min-h-screen'>
+    <div className='xl:grid xl:grid-cols-12 px-5 lg:px-15 my-5 min-h-screen'>
       
-      <div className='col-span-8 h-[500px]'>
+      <div className='xl:col-span-8 h-[600px] lg:h-[500px]'>
       
       <div className='flex flex-col'>
                      
-      <div className='w-full h-[500px]'>
+      <div className='w-full h-[300px] xl:h-[500px]'>
       <CourseVideo videoUrl={contentData && contentData[activeContentIdx]?.videoUrl || [{}]} />
       </div>
       
@@ -84,8 +84,8 @@ const CourseContent = ({courseContentData,courseId,refetch,course}: Props) => {
         
       </div>  
     
-      <div className='col-span-4'>
-       <div className='w-full px-10'>
+      <div className='xl:col-span-4'>
+       <div className='w-full px-0 lg:px-10'>
        <ValidCourseContentList courseData={contentData || [{}]} setActiveContentIdx={setActiveContentIdx} />
        </div>
       </div>  
