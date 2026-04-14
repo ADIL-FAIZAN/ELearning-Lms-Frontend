@@ -122,20 +122,20 @@ const CourseDetail = ({ courseId }: Props) => {
     {stripePromise ? (
     <>
 
-    <div className='flex flex-col-reverse sm:grid sm:grid-cols-12 mt-10 px-5 sm:px-10 min-h-screen'>
+    <div className='flex flex-col-reverse xl:grid xl:grid-cols-12 mt-10 px-5 sm:px-10 min-h-screen'>
 
-    <div className='sm:col-span-8 sm:pr-15'>
+    <div className='xl:col-span-8 xl:pr-15'>
                                 
     <div> {/* Course Detail Parent Div */}
     
     <div>  
-    <div className='font-poppins font-bold text-[22px] max-sm:hidden'>
+    <div className='font-poppins font-bold text-[22px] max-xl:hidden'>
 
     {courseData?.course?.name}                           
 
     </div>
                             
-    <div className='flex justify-between max-sm:hidden w-full mt-2 mb-5'>
+    <div className='flex justify-between max-xl:hidden w-full mt-2 mb-5'>
 
     <div className='flex'>
     <Ratings rating={courseData?.course.ratings} />                               
@@ -146,7 +146,7 @@ const CourseDetail = ({ courseId }: Props) => {
 
     </div>
                             
-    <div className='max-sm:mt-10'>
+    <div className='max-xl:mt-10'>
     <p className="font-poppins font-bold text-[25px]">What you will learn from this course?</p>
     
      <div className='mt-2'>                               
@@ -268,11 +268,11 @@ const CourseDetail = ({ courseId }: Props) => {
                 
     </div>
 
-    <div className='sm:col-span-3'>
+    <div className='xl:col-span-3'>
                              
       <div>
     
-      <div className='font-poppins font-bold text-[22px] mb-6 sm:hidden'>
+      <div className='font-poppins font-bold text-[22px] mb-6 xl:hidden'>
 
       {courseData?.course?.name}                           
 
