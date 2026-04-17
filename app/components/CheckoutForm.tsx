@@ -5,6 +5,7 @@ import { redirect, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import socketIO from "socket.io-client";
+import Loader from './Loader/Loader';
 const EndPoint = process.env.NEXT_PUBLIC_SOCKET_SERVER_URL || "";
 const socketId = socketIO(EndPoint,{transports: ["websocket"]});
 
@@ -59,7 +60,8 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
 
     
     const handleRefetch = async () => {
-  try {
+   
+    try {
     const result = await userRefetch();
     await refetchSingleCourse();
     router.push(`/course-access/${courseData?.course?._id}`);
@@ -101,7 +103,10 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
 
 
   return (
-  <>
+    <>
+    {isLoading ? <Loader/>
+    :
+    
    <form id="payment-form" onSubmit={handleSubmit}>
       <LinkAuthenticationElement
       id="link-authentication-element"
@@ -122,7 +127,8 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
       )}
               
      </form>
-  
+          
+      }
 </>  
   )
 }
