@@ -104,9 +104,7 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
 
   return (
     <>
-    {isLoading ? <Loader/>
-    :
-    
+       
    <form id="payment-form" onSubmit={handleSubmit}>
       <LinkAuthenticationElement
       id="link-authentication-element"
@@ -116,7 +114,7 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
               
       <button disabled={isLoading || !stripe || !elements}  id="submit">
       <span id="button-text" className={`flex flex-row justify-center items-center py-3 px-6 rounded-full cursor-pointer bg-[#2190ff] min-h-[45px] w-full text-[16px] font-Poppins font-semibold mt-2 !h-[35px]`}>
-      {isLoading ? "Paying..." : "Pay Now"}
+      {isLoading ? 'Paying...': "Pay Now"}
       </span>
       </button>
 
@@ -128,7 +126,7 @@ const CheckoutForm = ({courseData,refetchSingleCourse}: Props) => {
               
      </form>
           
-      }
+      
 </>  
   )
 }
