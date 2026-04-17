@@ -319,11 +319,10 @@ const CourseDetail = ({ courseId }: Props) => {
      <>
                 
       <div className='w-full bg-[#00000036] fixed top-0 left-0 right-0 bottom-0  flex justify-center items-center'>              
-      <div className='w-[400px] h-[400px] bg-white text-black px-3 pt-3 z-50 rounded-sm'>    
+      <div className='w-[400px] h-[400px] bg-white text-black pb-5 px-3 pt-3 z-50 rounded-sm overflow-y-scroll'>    
       <div className='flex justify-end w-full'><RxCross1 size={20} onClick={()=> setPopUpOpen(!popUpOpen)} /></div>
                             
-      {stripePromise && clientSecret&&(
-                          
+      {stripePromise && clientSecret&&(                   
       <>                              
       <Elements stripe={stripePromise} options={{clientSecret}}>                    
       <CheckoutForm courseData={courseData } refetchSingleCourse={refetchSingleCourse} />
